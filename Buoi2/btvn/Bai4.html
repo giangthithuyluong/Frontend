@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN2_4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+        ul.main {
+            margin:10px 0 0 10px;
+            width: 200px;
+            border: 1px solid rgb(120 180 61);
+            background-color: rgb(156 198 90);
+            line-height: 30px;
+            position: relative;
+        }
+        ul.main > li {
+            width: 100%;
+            padding-left: 10px;
+            border: 1px solid rgb(120 180 61);
+        }
+        ul.main > li::before {
+            content: "\BB";
+            color: white;
+            margin-right: 10px;
+        }
+        ul.main > li:hover {
+            color: white;
+            background-color: rgb(120 180 61);
+        }
+        ul.main > li:hover > ul.child {
+            display: block;
+        }
+
+        ul.child {
+            width: 200px;
+            border: 1px solid rgb(120 180 61);
+            background-color: rgb(120 180 61);
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            display: none;
+        }
+        ul.child > li {
+            padding-left: 20px;
+            border-bottom: 1px solid rgb(156 198 90);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li>
+            Tin tuc trong ngay
+            <ul class="child">
+                <li>Tin Ha Noi</li>
+                <li>Tin TP HCM</li>
+                <li>Tin Da Nang</li>
+                <li>Tai nan giao thong</li>
+                <li>Tin Can Tho</li>
+                <li>Du bao thoi tiet</li>
+            </ul>
+        </li>
+        <li>Bong da</li>
+        <li>The gioi</li>
+        <li>Thoi trang</li>
+        <li>Pham luat</li>
+        <li>Thoi trang Hi-tech</li>
+    </ul>
+</body>
+</html>

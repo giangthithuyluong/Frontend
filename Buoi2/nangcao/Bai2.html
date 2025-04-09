@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2_2</title>
+    <style>
+        .main {
+            width: 200px;
+            line-height: 30px;
+        }
+        .main>.item {
+            width: 100%;
+            border-top: 1px solid lightgray;
+            color: gray;
+        }
+        .main>.item:last-child {
+            border-bottom: 1px solid lightgray;
+        }
+        .main>.item>sup:last-child {
+            color: lightgray;
+            float: right;
+        }
+        .main>.item:hover {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <script>
+        var container = document.querySelector("div.main");
+        var data = [
+            {name: "Athletic Heather/Black", quan: 34},
+            {name: "Black", quan: 828},
+            {name: "Carolina Blue", quan: 2},
+            {name: "Daisy", quan: 2},
+            {name: "Dark Heather", quan: 438},
+            {name: "Forest Green", quan: 297},
+            {name: "Gold", quan: 2},
+            {name: "Heather Grey", quan: 112},
+            {name: "Heliconia", quan: 1},
+            {name: "Hot Pink", quan: 110},
+            {name: "Independence Red", quan: 1},
+            {name: "Iris", quan: 1}
+        ]
+        var text = data.map((value, index) => 
+        `<div class="item" id="stt${index}">
+            <span>${value.name}</span>
+            <sup>(${value.quan})</sup>
+        </div>`).join(" ");
+        container.innerHTML = text;
+    </script>
+</body>
+</html>

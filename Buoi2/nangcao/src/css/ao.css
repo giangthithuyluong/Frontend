@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.list {
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+}
+.list .item {
+    width: 250px;
+    margin: 0 20px;
+    float: left;
+    background-color: white;
+}
+.list .item img {
+    width: 100%;
+    max-height: 70%;
+}
+.list .item p.type {
+    font-size: small;
+    text-transform: uppercase;
+    color: gray;
+}
+.list .item span.oldCost {
+    color: gray;
+    text-decoration: line-through;
+}
+.list .item:hover p.title {
+    color: blue;
+}

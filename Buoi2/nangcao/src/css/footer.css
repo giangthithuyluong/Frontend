@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul {
+    list-style: none;
+}
+.footer {
+    width: 100vw;
+    line-height: 30px;
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer .terms, .footer .information {
+    margin: 0 10px;
+    flex: 2;
+}
+.footer .contact {
+    margin: 0 10px;
+    flex: 3;
+}
+.footer .item:first-child li, .footer .item:nth-child(2) li {
+    border-bottom: 1px solid rgb(240, 240, 240);
+    text-transform: capitalize;
+}
+.footer .item .name {
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.footer .item .name::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: lightgray;
+    display: block;
+}
+.footer .item .title {
+    font-weight: bold;
+}
