@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai3_4</title>
+    <link rel="stylesheet" href="./src/css/baiviet.css">
+</head>
+<body>
+    <div class="main">
+        <p class="header">Bai viet lien quan</p>
+        <hr>
+        <div class="content">
+            <script>
+                var content = document.querySelector(".content");
+                var data = [
+                    {image: "./src/image/Bài 1.jpg", title: "Trac nghiem CSS co dap an P4"},
+                    {image: "./src/image/Bài 1.jpg", title: "eQuiz - Bai kiem tra trac nghiem ve ASP"},
+                    {image: "./src/image/Bài 1.jpg", title: "Trac nghiem CSS co dap an P3"},
+                    {image: "./src/image/Bài 1.jpg", title: "eQuiz - Bai kiem tra trac nghiem va SQL"},
+                    {image: "./src/image/Bài 1.jpg", title: "eQuiz - Bai trac nghiem kien thuc ve trinh duyet"},
+                    {image: "./src/image/Bài 1.jpg", title: "Trac nghiem kien thuc ve hack"},
+                ]
+                data.forEach(v => {
+                    let div = document.createElement("div");
+                    div.setAttribute("class", "item")
+                    let img = document.createElement("img");
+                    img.setAttribute("src", v.image);
+                    img.setAttribute("alt", "loi");
+                    let p = document.createElement("p");
+                    p.innerText = v.title;
+                    div.appendChild(img);
+                    div.appendChild(p);
+                    content.appendChild(div);
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
