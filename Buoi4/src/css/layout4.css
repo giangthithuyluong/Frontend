@@ -1,0 +1,47 @@
+.layout4 {
+    margin: 50px auto;
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "left pre right"
+    "left body right"
+    "left post right"
+    "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+}
+.layout4 > div {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout4 .header {
+    grid-area: header;
+    background-color: rgb(181, 77, 250);
+}
+.layout4 .left {
+    grid-area: left;
+    background-color: rgb(189, 140, 245);
+}
+.layout4 .pre {
+    grid-area: pre;
+    background-color: rgb(228, 205, 253);
+}
+.layout4 .body {
+    grid-area: body;
+}
+.layout4 .right {
+    grid-area: right;
+    background-color: rgb(189, 140, 245);
+}
+.layout4 .post {
+    grid-area: post;
+    background-color: rgb(228, 205, 253);
+}
+.layout4 .footer {
+    grid-area: footer;
+    background-color: rgb(181, 77, 250);
+}

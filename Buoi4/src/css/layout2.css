@@ -1,0 +1,40 @@
+.layout2 {
+    margin: 50px auto;
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "side main"
+    "side extra"
+    "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    gap: 5px;
+}
+.layout2 > div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout2 .header {
+    background-color: lightblue;
+    grid-area: header;
+}
+.layout2 .side {
+    background-color: mediumseagreen;
+    grid-area: side;
+}
+.layout2 .main {
+    background-color: gold;
+    grid-area: main;
+}
+.layout2 .extra {
+    background-color: gray;
+    grid-area: extra;
+}
+.layout2 .footer {
+    background-color: orange;
+    grid-area: footer;
+}

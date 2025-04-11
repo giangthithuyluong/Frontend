@@ -1,0 +1,40 @@
+.layout1 {
+    margin: 50px auto;
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "navigation navigation"
+    "index content"
+    "footer footer";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 10fr 2fr;
+}
+.layout1 > div {
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout1 .header {
+    grid-area: header;
+    border-bottom: none;
+}
+.layout1 .navigation {
+    grid-area: navigation;
+    border-bottom: none;
+}
+.layout1 .index {
+    grid-area: index;
+    border-bottom: none;
+    border-right: none;
+}
+.layout1 .content {
+    grid-area: content;
+    border-bottom: none;
+}
+.layout1 .footer {
+    grid-area: footer;
+}

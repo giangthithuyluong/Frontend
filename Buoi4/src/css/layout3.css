@@ -1,0 +1,38 @@
+.layout3 {
+    margin: 50px auto;
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "menu content recents"
+    "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 5fr 1fr;
+}
+.layout3 > div {
+    padding-top: 1rem;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+.layout3 .header {
+    grid-area: header;
+    background-color: aqua;
+}
+.layout3 .menu {
+    grid-area: menu;
+    background-color: bisque;
+}
+.layout3 .content {
+    grid-area: content;
+    background-color: bisque;
+}
+.layout3 .recents {
+    grid-area: recents;
+    background-color: bisque;
+}
+.layout3 .footer {
+    grid-area: footer;
+    background-color: aqua;
+}

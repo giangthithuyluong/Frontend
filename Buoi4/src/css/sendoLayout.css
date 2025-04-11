@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul {
+    list-style: none;
+}
+.mainlayout {
+    width: 100vw;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 50px 100px 350px 1fr;
+    grid-template-areas: 
+    "navigation navigation"
+    "header header"
+    "side pre"
+    "body body";
+}
+.mainlayout .navigation {
+    padding: 0 10%;
+    color: white;
+    background-color: #bc000b;
+    grid-area: navigation;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mainlayout .navigation .share {
+    max-width: 50%;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainlayout .header {
+    padding: 0 10%;
+    box-shadow: 0 1px 1px gray;
+    font-size: 3rem;
+    color: white;
+    background-color: #d60f1c;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+.mainlayout .header .logo {
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 10px;
+}
+.mainlayout .header .list, .mainlayout .header .sale {
+    margin: 0 10px;
+    max-width: 10%;
+    width: 50px;
+}
+.mainlayout .header .list ul {
+    position: absolute;
+    top: 150px;
+    width: 200px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+.mainlayout .header .list:hover ul {
+    display: block;
+}
+.mainlayout .header .search {
+    margin: 0 50px 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.mainlayout .header .search input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    line-height: 30px;
+    border: none;
+}
+.mainlayout .header .search button {
+    width: 20%;
+    padding: 5px;
+    line-height: 30px;
+    background-color: orange;
+    border: none;
+    color: white;
+}
+
+.mainlayout .side {
+    grid-area: side;
+    background-color: #bc000b;
+}
+.mainlayout .side .list {
+    width: 75%;
+    height: 100%;
+    line-height: 30px;
+    margin-left: 25%;
+    padding: 5px 15px;
+    background-color: white;
+}
+.mainlayout .side .list li:hover {
+    color: royalblue;
+}
+
+
+.mainlayout .pre {
+    grid-area: pre;
+    background-color: #bc000b;
+}
+
+.mainlayout .body {
+    grid-area: body;
+}
