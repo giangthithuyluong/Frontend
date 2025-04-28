@@ -4,12 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bai4_4</title>
+    <link rel="stylesheet" href="./src/css/nodemy.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <div class="footer">
-        <div class="logo"></div>
-        <div class="link"></div>
-        <div class="contact"></div>
+        <div class="logo">
+            <p>n<img src="./src/image/bai 4.png" alt="loi"/>demy</p>
+        </div>
+        <div class="link">
+            <p>Lien ket:</p>
+            <div class="content">
+            </div>
+        </div>
+        <div class="contact">
+            <p>Lien he:</p>
+            <div class="content">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 copyright all right reserved</p>
+        </div>
     </div>
+
+    <script>
+        var link = document.querySelector('.link');
+        var linkContent = link.querySelector('.content');
+        var linkData = [
+            {
+                icon: "\u{F6FD}",
+                text: "Chuong trinh dao tao Nodejs",
+                link: "#"
+            },
+            {
+                icon: "\u{F344}",
+                text: "Cong dong Facebook",
+                link: "#"
+            },
+            {
+                icon: "\u{F4CF}",
+                text: "Cong dong Nodejs Viet Nam",
+                link: "#"
+            },
+            {
+                icon: "\u{F3A7}",
+                text: "Ve chung toi",
+                link: "#"
+            },
+        ];
+        linkData.forEach(({icon, text, link}, index) => {
+            let a = document.createElement("a");
+            a.dataset.before = icon;
+            a.innerText = text;
+            a.setAttribute("href", link);
+            linkContent.append(a);
+        });
+
+        var contact = document.querySelector(".contact");
+        var contactContent = contact.querySelector(".content");
+        var contactData = [
+            {
+                icon: "\u{F3E7}",
+                text: "Dia chi: So 19, Ngo 133 Thai Ha, Dong Da, Ha Noi"
+            },
+            {
+                icon: "\u{F32F}",
+                text: "Email: support@nodemy.vn"
+            },
+            {
+                icon: "\u{F5B4}",
+                text: "Phone: 0866622805"
+            }
+        ];
+        contactData.forEach(({icon, text}, index) => {
+            let p = document.createElement("p");
+            p.dataset.before = icon;
+            p.innerText = text;
+            contactContent.append(p);
+        })
+
+        var page = [
+            {
+                icon: "\u{F344}",
+                link: "#"
+            },
+            {
+                icon: "\u{F5EF}",
+                link: "#"
+            },
+            {
+                icon: "\u{F472}",
+                link: "#"
+            },
+        ];
+        page.forEach(({icon, link}, index) => {
+            let a = document.createElement("a");
+            a.dataset.after = icon;
+            a.href = link;
+            a.className = "icon";
+            contactContent.append(a);
+        })
+    </script>
 </body>
 </html>

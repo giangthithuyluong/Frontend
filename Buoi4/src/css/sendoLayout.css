@@ -8,7 +8,7 @@ ul {
     list-style: none;
 }
 .mainlayout {
-    width: 100vw;
+    width: 100%;
     height: 1000px;
     display: grid;
     grid-template-columns: 25% 1fr;
@@ -20,7 +20,7 @@ ul {
     "body body";
 }
 .mainlayout .navigation {
-    padding: 0 10%;
+    padding: 0 5%;
     color: white;
     background-color: #bc000b;
     grid-area: navigation;
@@ -37,7 +37,7 @@ ul {
 }
 
 .mainlayout .header {
-    padding: 0 10%;
+    padding: 0 5%;
     box-shadow: 0 1px 1px gray;
     font-size: 3rem;
     color: white;
@@ -93,18 +93,25 @@ ul {
     border: none;
     color: white;
 }
+.mainlayout .header .search button::after {
+    content: "Tim kiem";
+}
 
 .mainlayout .side {
     grid-area: side;
     background-color: #bc000b;
 }
-.mainlayout .side .list {
-    width: 75%;
+.mainlayout .side .containList {
+    width: 80%;
     height: 100%;
-    line-height: 30px;
     margin-left: 25%;
-    padding: 5px 15px;
     background-color: white;
+    overflow-y: scroll;
+}
+.mainlayout .side .list {
+    height: max-content;
+    line-height: 30px;
+    padding: 5px 15px;
 }
 .mainlayout .side .list li:hover {
     color: royalblue;
@@ -117,5 +124,64 @@ ul {
 }
 
 .mainlayout .body {
+    padding: 0 5%;
     grid-area: body;
+}
+.body .category {
+    display: flex;
+    justify-content: start;
+}
+.body .category .row1, .body .category .row2 {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.body .category .item {
+    flex: 1;
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.body .category .item img {
+    max-width: 100%;
+    width: 50px;
+    max-height: 80%;
+    height: 50px;
+    border-radius: 50%;
+}
+.body .category .item p {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mainlayout {
+        grid-template-columns: 40% 1fr;
+    }
+    .mainlayout .navigation, .mainlayout .header, .mainlayout .body {
+        padding: 0;
+    }
+    .mainlayout .header .search button::after {
+        content: "";
+    }
+    .mainlayout .body .category {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .mainlayout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "navigation"
+        "header"
+        "pre"
+        "body";
+    }
+    .mainlayout .header .search {
+        display: none;
+    }
+    .mainlayout .side {
+        display: none;
+    }
 }
