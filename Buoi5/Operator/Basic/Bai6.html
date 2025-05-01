@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5_6</title>
+</head>
+<body>
+    
+    <script>
+        let login = prompt("Nhap: ", "");
+        let message = login == "Employee" ? "Hello" : (login == "Director" ? "Greetings" : login == "" && "No login");
+        message && alert(message);
+    </script>
+</body>
+</html>

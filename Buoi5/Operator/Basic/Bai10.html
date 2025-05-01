@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5_10</title>
+</head>
+<body>
+    <script>
+        do {
+            var password = prompt("Password:");
+            alert(password == "" ? "password khong de trong" : password.length < 8 || password.length > 16 ? "password k hop le" : "password hop le");
+        } while(password == "" || password.length < 8 || password.length > 16)
+    </script>
+</body>
+</html>

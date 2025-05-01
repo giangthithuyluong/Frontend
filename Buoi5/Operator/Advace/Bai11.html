@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5_11</title>
+</head>
+<body>
+    <script>
+        var sanPham = prompt("So luong san pham:", 0);
+        sanPham = parseInt(sanPham);
+        let gia = sanPham <= 20 ? 10000 : sanPham <= 50 ? 8000 : sanPham < 100 ? 7000 : 6000;
+        let text = `Gia: ${gia}/san pham \nTien hang: ${sanPham*gia}`;
+        alert(text);
+    </script>
+</body>
+</html>

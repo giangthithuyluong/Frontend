@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5_8</title>
+</head>
+<body>
+    <script>
+        let page = 3;
+        do {
+            let button = confirm("Next?") ? "next" : "prev";
+            var x = confirm(`Page: ${button == "next" ? (page == 10 ? page : ++page) : (page == 1 ? page : --page)}. Do u want continue?`);
+        } while(x)
+    </script>
+</body>
+</html>
