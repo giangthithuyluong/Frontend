@@ -1,0 +1,40 @@
+<head>
+    <title>Bai 1</title>
+    <link rel="stylesheet" href="../acess/css/main.css">
+    <link rel="stylesheet" href="../acess/css/bai1.css">
+</head>
+<body>
+    <button class="goback" onclick="history.back()">Quay lai</button>
+    <div id="bai1">
+        <div id="calculator">
+            <p id="calculator_title">tip calculator</p>
+            <div class="calculator_input">
+                <label for="bill">How much was your bill?</label>
+                <span><input type="number" name="bill" id="bill" placeholder="Bill Amount"></span>
+                <p class="alert" id="bill_alert"></p>
+            </div>
+            <div class="calculator_input">
+                <label for="service">How was your service?</label>
+                <select name="service" id="service" >
+                    <option value="" selected disabled>--Choose an Option--</option>
+                    <option value="30">30% - Outstanding</option>
+                    <option value="20">20% - Good</option>
+                    <option value="15">15% - It was OK</option>
+                    <option value="10">10% - Bad</option>
+                    <option value="5">5% - Terrible</option>
+                </select>
+                <p class="alert" id="service_alert"></p>
+            </div>
+            <div class="calculator_input">
+                <label for="people">How many people are sharing the bill?</label>
+                <span><input type="number" name="people" id="people" placeholder="Number of People"></span>
+                <p class="alert" id="people_alert"></p>
+            </div>
+            <div class="calculator_input">
+                <button id="calculator_submit">Calculate!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../acess/js/bai1.js"></script>
+</body>

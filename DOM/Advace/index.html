@@ -1,0 +1,49 @@
+<head>
+    <title>HTML - DOM nang cao</title>
+    <link rel="stylesheet" href="./acess/css/main.css">
+</head>
+<body>
+    <div class="layout_home">
+        <header>
+            <h1>On tap HTML - DOM</h1>
+        </header>
+        <nav>
+            <a href="./pages/Bai1.html" data-id="0" id="bai1">Bai 1</a>
+            <a href="./pages/Bai2.html" data-id="1" id="bai2">Bai 2</a>
+            <a href="./pages/Bai3.html" data-id="2" id="bai3">Bai 3</a>
+            <a href="./pages/Bai4.html" data-id="3" id="bai4">Bai 4</a>
+            <a href="./pages/Bai5.html" data-id="4" id="bai5">Bai 5</a>
+            <a href="./pages/Bai6.html" data-id="5" id="bai6">Bai 6</a>
+            <a href="./pages/Bai6.html" data-id="6" id="bai7">Bai 7</a>
+            <a href="./pages/Bai6.html" data-id="7" id="bai8">Bai 8</a>
+        </nav>
+        <aside>
+            <div id="preview"></div>
+        </aside>
+        <footer>
+            &copy; 2025 _ Giang Thi Thuy Luong
+        </footer>
+    </div>
+
+    <script>
+        const debai = [
+            "Tạo ứng dụng tính tiền típ sau  :  \n1 ô input lấy số tiền đơn hàng . \n1 option : chứa đánh giá  và % tiền típ.\nSố người chia sẻ cùng  đơn hàng .",
+            "Tạo một form đăng nhập  \nVà 1 form đăng ký .\nNếu đăng nhập thành công, chuyển đến Bài 1.",
+            "Tạo 1 máy tính đơn giản có chức năng tính tổng, tích của 2 số nhập vào \nVà hiện ra được lịch sử và kết quả của từng phép tính",
+            "Hãy tạo ra 1 nút show ảnh để khi click vào thì hiện ra 1 ảnh mà mình mong muốn và khi ấn lần 2 thì ảnh đó sẽ bị ẩn đi",
+            "Hãy tạo 1 form đăng nhập đơn giản",
+            "Hãy hiện danh sách của user trên giao diện\nTạo 1 form đăng nhập đơn giản ngoài 2 ô input username, password  có thêm 2 nút là sign up và sign in",
+            "Cho một thẻ input và một nút nhấn \nNhập vào một chuỗi khi nhấn nút chuyển các ký tự chữ thường thành chữ hoa \nViết chữ hoa thành chữ thường.",
+            "Ứng dụng quản lý sản phẩm có các chức năng sau:\nHiển thị danh sách sản phẩm\nCó thể thêm một sản phẩm mới vào danh sách\nCó thể xoá một sản phẩm khỏi danh sách\nCó thể sửa tên của sản phẩm trong danh sách"
+        ]
+        var p = document.getElementById('preview')
+        function HienThi(e) {
+            p.innerHTML = debai[e.target.dataset.id].split('\n').map(text => `<p>${text}<\p>`).join('')
+        }
+        function An(e) {
+            p.innerHTML = ''
+        }
+        document.getElementById('bai1').onmouseenter = document.getElementById('bai2').onmouseenter = document.getElementById('bai3').onmouseenter = document.getElementById('bai4').onmouseenter = document.getElementById('bai5').onmouseenter = document.getElementById('bai6').onmouseenter = document.getElementById('bai7').onmouseenter = document.getElementById('bai8').onmouseenter = HienThi
+        document.getElementById('bai1').onmouseleave = document.getElementById('bai2').onmouseleave = document.getElementById('bai3').onmouseleave = document.getElementById('bai4').onmouseleave = document.getElementById('bai5').onmouseleave = document.getElementById('bai6').onmouseleave = document.getElementById('bai7').onmouseleave = document.getElementById('bai8').onmouseleave = An
+    </script>
+</body>
