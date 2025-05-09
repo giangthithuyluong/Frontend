@@ -1,3 +1,6 @@
+:root {
+    --change-animation-time: 1s
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,65 +12,61 @@
     width: 100vw;
     height: 100vh;
     background-color: aliceblue;
-}
+    & header {
+        max-height: 30vh;
+        height: 80px;
 
-.layout_home header {
-    max-height: 30vh;
-    height: 80px;
-
-    background-color: tomato;
+        background-color: brown;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        animation: change var(--change-animation-time) linear 0s infinite alternate-reverse both;
+    }
+    & nav {
+        background-color: white;
+        box-shadow: 0 5px 5px darkgrey;
+        
+        display: flex;
+        flex-wrap: wrap;
+        & a {
+            flex: 1;
+            line-height: 30px;
+        
+            text-align: center;
+            text-decoration: none;
+        
+            color: darkred;
+        
+            display: block;
+        }
+    }
+    & aside #preview {
+        margin: 10px auto;
+        max-width: 90vw;
+        line-height: 30px;
+    }
+    & footer {
+        width: 100%;
+        line-height: 50px;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        text-align: center;
     
-    animation: change 1s linear 0s infinite alternate-reverse both;
+        background-color: white;
+    
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 @keyframes change {
     from {
-        color: aliceblue;
+        color: white;
     }
     to {
-        color: tomato;
+        color: darkred;
     }
-}
-
-.layout_home nav {
-    background-color: white;
-    box-shadow: 0 5px 5px darkgrey;
-    
-    display: flex;
-    flex-wrap: wrap;
-}
-.layout_home nav a {
-    flex: 1;
-    line-height: 30px;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: red;
-
-    display: block;
-}
-
-.layout_home aside #preview {
-    margin: 10px auto;
-    max-width: 90vw;
-    line-height: 30px;
-}
-
-.layout_home footer {
-    width: 100%;
-    line-height: 50px;
-
-    text-align: center;
-
-    background-color: white;
-
-    position: absolute;
-    bottom: 0;
 }
 
 button.goback {
@@ -80,4 +79,41 @@ button.goback {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#form {
+    width: 300px;
+    border-radius: 20px;
+    line-height: 30px;
+    
+    background-color: white;
+
+    overflow: hidden;
+    & #title {
+        text-align: center;
+        text-transform: uppercase;
+
+        color: white;
+        background-color: darkred;
+    }
+    & .form_input {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        & input {
+            padding: 5px;
+            border: 2px inset gray;
+            outline: none;
+        }
+        & button#form_submit {
+            padding: 10px;
+            border: none;
+        
+            font-weight: bold;
+            text-transform: uppercase;
+        
+            color: white;
+            background-color: brown;
+        }
+    }
 }

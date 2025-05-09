@@ -1,0 +1,40 @@
+:root {
+    --content-width: 300px;
+    --form-height: 350px;
+    --main-color: rgb(103, 139, 180);
+    --dark-color: darkslateblue;
+}
+#bai3 {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px 0;
+
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & #form {
+        width: var(--content-width);
+        min-height: var(--form-height);
+        & #title, & #form_submit {
+            background-color: var(--main-color);
+        }
+        & p#tong, & p#tich {
+            margin: 15px;
+        }
+    }
+    & #history {
+        width: var(--content-width);
+        margin-top: 10px;
+        border-collapse: collapse;
+        border-color: var(--dark-color);
+
+        background-color: white;
+        & caption {
+            border: 1px solid var(--dark-color);
+            text-transform: uppercase;
+            color: white;
+            background-color: var(--main-color);
+        }
+    }
+}

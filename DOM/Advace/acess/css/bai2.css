@@ -1,0 +1,27 @@
+#bai2_dangnhap, #bai2_dangky {
+    width: 100%;
+    height: 100%;
+
+    background-color: brown;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bai2_dangnhap #form, #bai2_dangky #form {
+    min-height: 400px;
+}
+
+#bai2_dangnhap #form .form_input:last-child{
+    text-align: center;
+    & p {
+        text-transform: uppercase;
+    }
+    & a {
+        color: blue;
+        text-decoration: none;
+        &:hover {
+            color: green;
+        }
+    }
+}

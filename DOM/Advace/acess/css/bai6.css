@@ -1,0 +1,42 @@
+
+
+#bai6 {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+
+    display: flex;
+    gap: 20px;
+    & #form {
+        height: max-content;
+        color: white;
+        background-color: brown;
+        & .form_input:last-child {
+            flex-direction: row;
+            justify-content: space-between;
+            & #form_submit_signin, & #form_submit_signup {
+                padding: 10px 20px;
+
+                background-color: white;
+            }
+        }
+    }
+    & #bai6_list {
+        &::before {
+            content: 'danh sach user';
+            text-transform: uppercase;
+        }
+        & p {
+            line-height: 30px;
+            border: 1px solid black;
+            & .thongtin {
+                width: 150px;
+                display: inline-block;
+            }
+        }
+        & .chan {
+            color: white;
+            background-color: cornflowerblue;
+        }
+    }
+}
