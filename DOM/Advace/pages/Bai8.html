@@ -1,0 +1,33 @@
+<head>
+    <title>Bai 8</title>
+    <link rel="stylesheet" href="../acess/css/main.css">
+    <link rel="stylesheet" href="../acess/css/bai8.css">
+</head>
+<body>
+    <button class="goback" onclick="history.back()"><</button>
+    <div id="bai8">
+        <div id="add_form">
+            <h3 class="title">add new product</h3>
+            <form action="./Bai8.html" method="post">
+                <input type="text" name="new_product" id="new_product" placeholder="New Product">
+                <button type="submit" id="form_submit_add">Add</button>
+                <button type="submit" id="form_submit_edit">Edit</button>
+            </form>
+        </div>
+        <div id="list">
+            <h3 class="title">display all product</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="title" colspan="3">product name</th>
+                        <th id="count"></th>
+                    </tr>
+                </thead>
+                <tbody id="products">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../acess/js/bai8.js"></script>
+</body>

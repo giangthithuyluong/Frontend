@@ -1,0 +1,53 @@
+:root {
+    --green: #50af50;
+    --gray: #f2f2f2;
+    --red: #a52d2d;
+}
+#bai8 {
+    min-width: 450px;
+    width: 80vw;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div {
+        width: 100%;
+        line-height: 30px;
+        & .title {
+            text-align: start;
+            text-transform: capitalize;
+        }
+        & button {
+            padding: 6px 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: var(--green);
+        }
+        &#add_form form {
+            width: max-content;
+            padding: 10px 20px;
+
+            background-color: var(--gray);
+            & > input {
+                padding: 5px 10px;
+                width: 200px;
+            }
+        }
+        &#list table {
+            width: 100%;
+            border-collapse: collapse;
+            & * {
+                padding: 10px;
+                margin: 0;
+                &#count {
+                color: var(--red);
+                }
+                &.chan {
+                    background-color: var(--gray);
+                }
+            }
+        }
+    }
+}
